@@ -2,6 +2,23 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
+get '/' do
+  erb "This is the Main Page!"
+end
+
+get '/claire' do
+  erb :claire
+end
+
+get '/zoe' do
+  erb :zoe
+end
+
+get '/dad' do
+	erb :dad
+end
+
+
 # configure do
 #   enable :sessions
 # end
@@ -19,18 +36,6 @@ require 'sinatra/reloader' if development?
 #     halt erb(:login_form)
 #   end
 # end
-
-get '/' do
-  erb "This is the Main Page!"
-end
-
-get '/claire' do
-  erb :claire
-end
-
-get '/zoe' do
-  erb :zoe
-end
 
 # get '/login/form' do
 #   erb :login_form
